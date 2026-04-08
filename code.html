@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Jain | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --card-bg: #0f172a;
+            --accent-primary: #6366f1; /* Indigo */
+            --accent-secondary: #22d3ee; /* Cyan */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+            --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 50px;
+            text-align: left;
+            border-left: 4px solid var(--accent-primary);
+            padding-left: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: var(--border-color);
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-primary);
+        }
+
+        /* About Section */
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Topics Grid */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .topic-pill {
+            background-color: #1e293b;
+            padding: 14px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .topic-pill:hover {
+            background: #111827;
+            border-color: var(--accent-secondary);
+            transform: translateY(-2px);
+        }
+
+        .topic-pill i {
+            color: var(--accent-secondary);
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* Assignments Grid */
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .assignment-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+        }
+
+        .assignment-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--accent-secondary);
+        }
+
+        .assignment-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .view-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            gap: 8px;
+            width: fit-content;
+        }
+
+        .view-link i {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .view-link:hover i {
+            transform: translateX(4px);
+            color: var(--accent-primary);
+        }
+
+        /* Key Learnings */
+        .learnings-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .assignments-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Harsh Jain</h1>
+        <p class="subtitle">Renewable Energy Management Portfolio • Semester 8</p>
+    </header>
+
+    <section>
+        <div class="card">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am a Semester 8 engineering student specializing in Renewable Energy Management. This portfolio showcases my academic work, assignments, and understanding of sustainable energy systems including solar, wind, hydropower, and energy management strategies.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Topics Covered</h2>
+        <div class="topics-grid">
+            <div class="topic-pill"><i class="fas fa-sun"></i> Solar Energy</div>
+            <div class="topic-pill"><i class="fas fa-wind"></i> Wind Energy</div>
+            <div class="topic-pill"><i class="fas fa-droplet"></i> Hydropower</div>
+            <div class="topic-pill"><i class="fas fa-leaf"></i> Sustainability</div>
+            <div class="topic-pill"><i class="fas fa-bolt"></i> Energy Management</div>
+            <div class="topic-pill"><i class="fas fa-chart-line"></i> Energy Economics</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Assignments</h2>
+        <div class="assignments-grid">
+            <div class="assignment-card card">
+                <div>
+                    <h3>Assignment 1</h3>
+                    <p>National Energy Scenario report analyzing India's energy structure and sustainability challenges.</p>
+                </div>
+                <a href="https://viteduin59337-my.sharepoint.com/:b:/g/personal/harsh_jain2231_vit_edu_in/IQDBnbvnQK-WSanHN13udBgNASomVRFQ1CrqXrNX9UwIZ_Y?e=c23v5i" class="view-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="assignment-card card">
+                <div>
+                    <h3>Assignment 2</h3>
+                    <p>Assignment 2.</p>
+                </div>
+                <a href="https://viteduin59337-my.sharepoint.com/:b:/g/personal/harsh_jain2231_vit_edu_in/IQDVRdDIf7ytQr3231aBRLyaAer4rlB72_k4X0Exk1TtqL8?e=yqUWtx" class="view-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="assignment-card card">
+                <div>
+                    <h3>Assignment 2b</h3>
+                    <p>Assignment 2b.</p>
+                </div>
+                <a href="https://viteduin59337-my.sharepoint.com/:b:/g/personal/harsh_jain2231_vit_edu_in/IQA9vMl5ORcgSL6FJSRhv-W6AUB5hCLkBSp5XLzvMTiHuzg?e=Wg7njq" class="view-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="assignment-card card">
+                <div>
+                    <h3>Assignment 3</h3>
+                    <p>Assignment 3.</p>
+                </div>
+                <a href="https://viteduin59337-my.sharepoint.com/:b:/g/personal/harsh_jain2231_vit_edu_in/IQAmAHbijB5PTpKWVO4s_foCAcjTBFrKxrbAOzHfJc6ZMwU?e=u1qxlL" class="view-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="assignment-card card">
+                <div>
+                    <h3>Assignment 4</h3>
+                    <p>Assignment 4.</p>
+                </div>
+                <a href="https://viteduin59337-my.sharepoint.com/:b:/g/personal/harsh_jain2231_vit_edu_in/IQAhkTSaEEyUQrIgK2ZUmouQAd7wBo7RJZuJr946hIvL9kk?e=4PkOam" class="view-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="assignment-card card">
+                <div>
+                    <h3>Assignment 5</h3>
+                    <p>Assignment 5.</p>
+                </div>
+                <a href="https://viteduin59337-my.sharepoint.com/:b:/g/personal/harsh_jain2231_vit_edu_in/IQAhkTSaEEyUQrIgK2ZUmouQAd7wBo7RJZuJr946hIvL9kk?e=4PkOam" class="view-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card learnings-card">
+            <h2>Key Learnings</h2>
+            <p class="about-text">
+                This course helped me understand the transition towards renewable energy, importance of sustainability, and the role of modern technologies in energy management and environmental conservation. I gained insights into solar, wind, hydropower systems and energy economics.
+            </p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
